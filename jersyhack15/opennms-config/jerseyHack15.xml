@@ -1,0 +1,21 @@
+<model-import xmlns="http://xmlns.opennms.org/xsd/config/model-import" date-stamp="2015-03-14T16:50:08.723Z" foreign-source="jerseyHack15" last-import="2015-03-15T00:42:14.083Z">
+   <node building="jerseyHack15" foreign-id="1426369575290" node-label="bitstamp.net" parent-node-label="bitstamp.net">
+      <interface descr="bitstamp.net" ip-addr="149.126.72.187" status="1" snmp-primary="N">
+         <monitored-service service-name="HTTPS"/>
+         <monitored-service service-name="Bitstamp_API"/>
+      </interface>
+      <asset name="address1" value="London EC4A 3TW"/>
+      <asset name="longitude" value="-0.108769"/>
+      <asset name="latitude" value="51.515538"/>
+   </node>
+   <!-- https://api.nodeck.in/v1 -->
+   <!-- https://docs.google.com/presentation/d/1_AWLyHT3JY1hncC_mmlxcTv3Y-uMw8pvDma_B1Jb1yw/edit?pli=1#slide=id.g8c7d35c0f_068 -->
+   <node building="jerseyHack15" foreign-id="1426351922762" node-label="nodeck.in">
+      <interface descr="Tweet Bitcoin rewards" ip-addr="46.101.59.140" status="1" snmp-primary="N">
+         <monitored-service service-name="ICMP"/>
+         <monitored-service service-name="HTTPS"/>
+      </interface>
+      <asset name="longitude" value="-2.1070"/>
+      <asset name="latitude" value="49.1870"/>
+   </node>
+</model-import>

@@ -1,0 +1,32 @@
+<xml-datacollection-config rrdRepository="/opt/opennms/share/rrd/snmp/" xmlns="http://xmlns.opennms.org/xsd/config/xml-datacollection">
+	<!-- To understand how the XML Collector works, and how to configure it, please check the following link: http://www.opennms.org/wiki/XML_Collector -->
+
+	<xml-collection name="Bitstamp_API_collection">
+		<rrd step="300">
+			<rra>RRA:AVERAGE:0.5:1:2016</rra>
+			<rra>RRA:AVERAGE:0.5:12:1488</rra>
+			<rra>RRA:AVERAGE:0.5:288:366</rra>
+			<rra>RRA:MAX:0.5:288:366</rra>
+			<rra>RRA:MIN:0.5:288:366</rra>
+		</rrd>
+
+		<!-- EUR/USD conversion rate GET https://www.bitstamp.net/api/eur_usd/ -->
+		<!-- example {"sell": "1.0479", "buy": "1.0578"} -->
+
+		<!-- <xml-source url="https://{ipaddr}/api/eur_usd"> -->
+		<xml-source url="http://www.bitstamp.net/api/eur_usd">
+			<request method="GET">
+				<parameter name="timeout" value="6000" />
+				<parameter name="retries" value="2" />
+				<parameter name="disable-ssl-verification" value="true" />
+			</request>
+			<xml-group name="eur_usd" resource-type="node" resource-xpath="/">
+				<xml-object name="sell" type="GAUGE" xpath="sell" />
+				<xml-object name="buy" type="GAUGE" xpath="buy" />
+			</xml-group>
+		</xml-source>
+		<!-- <xml-source url="http://{ipaddr}/src_n"> -->
+
+		<!-- </xml-source> -->
+	</xml-collection>
+</xml-datacollection-config>
