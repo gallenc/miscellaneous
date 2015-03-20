@@ -14,7 +14,8 @@
 		<!-- example {"sell": "1.0479", "buy": "1.0578"} -->
 
 		<!-- <xml-source url="https://{ipaddr}/api/eur_usd"> -->
-		<xml-source url="http://www.bitstamp.net/api/eur_usd">
+		<!-- note http works as well because of permanent redirect on site -->
+		<xml-source url="https://{nodeLabel}/api/eur_usd">
 			<request method="GET">
 				<parameter name="timeout" value="6000" />
 				<parameter name="retries" value="2" />
