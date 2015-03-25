@@ -64,7 +64,7 @@
             <parameter key="thresholding-enabled" value="true"/>
         </service>
 
-        <service name="WMI" interval="300000" user-defined="false" status="off">
+        <service name="WMI" interval="300000" user-defined="false" status="on">
             <parameter key="collection" value="default"/>
             <parameter key="thresholding-enabled" value="true"/>
         </service>

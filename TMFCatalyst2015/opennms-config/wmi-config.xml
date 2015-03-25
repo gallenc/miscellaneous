@@ -1,5 +1,8 @@
 <?xml version="1.0"?>
-<wmi-config retry="2" timeout="1500" 
-	username="Administrator" domain="WORKGROUP" password="password">
+<wmi-config retry="2" timeout="1500" username="cgallen" domain="WORKGROUP" password="2741999">
+	<definition username="cgallen" domain="WORKGROUP" password="xxxxxx">
+		<!-- <range begin="192.168.153.1" end="192.168.153.255"/> -->
+		<specific>192.168.153.1</specific>
+	</definition>
 </wmi-config>
 
